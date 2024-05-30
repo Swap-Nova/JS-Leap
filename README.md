@@ -3,7 +3,7 @@
 - Understand the syntax of the code base and get the best practices.
 - Code and logic of JS topics like Promises and Async-Await
 
-## Async
+## Async-await
 - All tasks will run simultaneously and whatever task is completed first the output of that will be generated. Therefore, there is no order in this.
 - There are times when the final code output is dependent on a different server, at those times we don’t know when the output will be received back to us from the other server so we cannot write sync codeand therefore, we use asyncconcepts in order to avoid blocking and whenever the required output comes from the other server the code will run.
 - There’s a main-stack for the sync variables and a side-stack for the async variables. Once the async variable run-time is allotted it is then moved to the main-stack for the final execution, i.e., all the variables that are first present in the main-stack run and then the complier looks at the side-stack.
