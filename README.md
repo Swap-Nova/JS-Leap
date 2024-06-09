@@ -67,4 +67,32 @@ number.then(function(){
 })
 ```
 
+## Document Object Model (DOM)
+- Program interface that represents program change that can affect document structure, style, and content. Treats HTML document as a tree structure. This will handle functionality using JS that will make the page interactive.
+
+```js
+// changes to bulb
+let bulb_function = document.querySelector("#bulb");
+let button_function = document.querySelector("button");
+
+// logic building for on-off change
+let flag = 0;
+
+button_function.addEventListener("click", function(){
+    if(flag == 0){
+        bulb_function.style.backgroundColor= "Yellow";
+        flag = 1;
+        this.innerHTML= "OFF";
+    }
+    else if (flag == 1){
+        bulb_function.style.backgroundColor="White";
+        flag = 0;
+        this.innerHTML= "ON";
+    }
+    else{
+        console.log("Button broken");
+    }
+});
+```
+
 ![](https://github.com/Swap-Nova/JS-Reinvigorate/blob/main/crash/README.gif)
