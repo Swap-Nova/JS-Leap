@@ -120,3 +120,26 @@ promise_4.then(()=>{
 setTimeout(()=>{
     console.log("=====================");
 },3000);
+
+// replacing with async await function
+(async function(){
+    let number_check = new Promise<void>((res,rej)=>{
+        let n = Math.floor(Math.random()*10);
+        console.log("Generated Number: " + n);
+        if(n<5){
+            return res();
+        }
+        else{
+            return rej();
+        }
+    })
+
+    try{
+        await number_check;
+        console.log("The number is less than 5");
+    }
+    catch{
+        console.log("The number is greater than 5");
+    }
+})();
+console.log("=====================");
